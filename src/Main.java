@@ -1,7 +1,6 @@
 import com.insurance.main.PolicyManagementModule;
 import com.insurance.model.Policy;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class Main {
 
         switch(input){
             case 1:
-                pmm.CreatePolicy();
+                pmm.createPolicy();
                 break;
             case 2:
                 //pmm.UpdatePolicy();
@@ -42,6 +41,7 @@ public class Main {
                 System.out.println("Invalid number! Please enter a number from 1-4.");
         }
 
+        System.out.println("...................................");
         System.out.println("List of all policies ids created: ");
         //Deepak:why is it always showing only one id
         Map<String, Policy> p = pmm.displayData();

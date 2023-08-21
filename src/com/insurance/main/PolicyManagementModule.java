@@ -2,7 +2,6 @@ package com.insurance.main;
 
 import com.insurance.model.Policy;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -15,6 +14,7 @@ public class PolicyManagementModule {
 
      //Policy p1 = new Policy(101,"1011","Health Insurance",50000.0,50.0,"2022-10-10","2023-10-10","Active",true);
     //policyMap.put(101, p1); Deepak??
+    //try new code
 
 
     public static void displayPolicyMenu(){
@@ -25,7 +25,7 @@ public class PolicyManagementModule {
         System.out.println("3. Delete a Policy. Please enter 3 to delete an existing policy");
         System.out.println("4. Search a Policy. Please enter 4 to search an existing policy");
     }
-    public static void CreatePolicy(){
+    public static void createPolicy(){
         System.out.println("Let us create a policy for you. Please provide your details: ");
         System.out.println("Enter customerId: ");
         int customerId = s.nextInt();
@@ -114,12 +114,12 @@ public class PolicyManagementModule {
             System.out.println("Policy status updated to active.");
         }
     }
-    public static void DeletePolicy(String policyId){
+    public static void deletePolicy(String policyId){
         Policy currentPolicy = policyMap.get(policyId);
         policyMap.remove(policyId);
         System.out.println(policyId + " has been successfully removed from the system.");
     }
-    public static void SearchPolicy(String policyId){
+    public static void searchPolicy(String policyId){
         boolean found = false;
         for(Map.Entry<String, Policy> entry : policyMap.entrySet()){
             if( entry.getKey().equals(policyId)){
