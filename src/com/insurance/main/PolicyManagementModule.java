@@ -59,6 +59,44 @@ public class PolicyManagementModule {
             System.out.println("Please enter the correct policy type.");
         }
     }
+
+    public static void createPolicy1(){
+        System.out.println("Let us create a policy for you. Please provide your details: ");
+        System.out.println("Enter customerId: ");
+        int customerId = s.nextInt();
+        //verify the customerId is valid??  verifyCustomer(Id); Deepak
+        System.out.println("Please enter a policy type (Health or Home): ");
+        String pType = s.next();
+
+        if("Health".equalsIgnoreCase(pType) || "Home".equalsIgnoreCase(pType)){
+            //add new policy for a customer
+            String newPolicyId = addPolicy(customerId, pType);
+            if(newPolicyId != null ){
+                System.out.println("Great! The new " + pType + " insurance policy has been created for you. Your policy id is: " + newPolicyId);
+            }
+        }else{
+            System.out.println("Please enter the correct policy type.");
+        }
+    }
+
+    public static void createPolicy2(){
+        System.out.println("Let us create a policy for you. Please provide your details: ");
+        System.out.println("Enter customerId: ");
+        int customerId = s.nextInt();
+        //verify the customerId is valid??  verifyCustomer(Id); Deepak
+        System.out.println("Please enter a policy type (Health or Home): ");
+        String pType = s.next();
+
+        if("Health".equalsIgnoreCase(pType) || "Home".equalsIgnoreCase(pType)){
+            //add new policy for a customer
+            String newPolicyId = addPolicy(customerId, pType);
+            if(newPolicyId != null ){
+                System.out.println("Great! The new " + pType + " insurance policy has been created for you. Your policy id is: " + newPolicyId);
+            }
+        }else{
+            System.out.println("Please enter the correct policy type.");
+        }
+    }
     public static boolean verifyCustomer(int Id){
         //get all ids of customer  Question to Deepak?
         //loop through it to find this id
